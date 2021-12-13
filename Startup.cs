@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -24,6 +25,11 @@ namespace Example_2451
         public void Configure(IApplicationBuilder app)
         {
             app.UseStaticFiles();
+            app.Use((context, next) =>
+            {
+                var url = context.Request.GetDisplayUrl();
+                return next.Invoke();
+            });
             app.UseMvc(
                 r =>
                 {

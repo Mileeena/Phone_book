@@ -13,7 +13,7 @@ namespace Phone_book.Controllers
     {
         public IActionResult Index()
         {
-            List<Сontact> contact = Repository.GetСontact();
+            List<Сontact> contact = Repository.GetСontacts();
             return View(contact);
         }
     }

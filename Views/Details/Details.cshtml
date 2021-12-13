@@ -1,0 +1,21 @@
+﻿@model Phone_book.Models.Сontact
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Details</title>
+    <link href="~/css/stylecss.css" rel="stylesheet" />
+    <script src="~/ts/scripts.js"></script>
+</head>
+<body>
+<table border="1">
+    <tr>
+            <td><p>@Model.Id</p></td>
+            <td><p>@Model.Surname</p></td>
+            <td><p>@Model.Name</p></td>
+            <td><p>@Model.Patronymic</p></td>
+            <td><p>+@Model.PhoneNumber</p></td>
+            <td><p>@Model.Address</p></td>
+        </tr>
+</table>
+</body>
+</html>

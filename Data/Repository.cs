@@ -10,9 +10,9 @@ namespace Phone_book.Data
 {
     public static class Repository
     {
-        public static List<Сontact> GetСontact()
+        public static List<Сontact> Contacts = new List<Сontact>();
+        public static List<Сontact> GetСontacts()
         {
-            List<Сontact> Contacts = new List<Сontact>();
             Сontact temp;
 
             MySqlConnectionStringBuilder strConnection = new MySqlConnectionStringBuilder()
@@ -60,6 +60,11 @@ namespace Phone_book.Data
 
             }
             return Contacts;
+        }
+
+        public static Сontact GetContactById(int id)
+        {
+            return Contacts.FirstOrDefault(x => x.Id == id);
         }
     }
 }

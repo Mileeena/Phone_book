@@ -1,5 +1,4 @@
-﻿@using Phone_book.Models
-@model List<Phone_book.Models.Сontact>
+﻿@model List<Phone_book.Models.Сontact>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -11,18 +10,17 @@
     <p class="fontStyle">
 
         <table border="1">
-
             @foreach(var e in Model)
-            {
-                <tr>
-                    <td><a href="#">@e.Id</a></td>
-                    <td><p>@e.Surname</p></td>
-                    <td><p>@e.Name</p></td>
-                    <td><p>@e.Patronymic</p></td>
-                    <td><p>+@e.PhoneNumber</p></td>
-                    <td><p>@e.Address</p></td>
-                </tr>
-            }
+        {
+            <tr>
+                <td><a href="/Details/Details?id=@e.Id">@e.Id</a></td>
+                <td><p>@e.Surname</p></td>
+                <td><p>@e.Name</p></td>
+                <td><p>@e.Patronymic</p></td>
+                <td><p>+@e.PhoneNumber</p></td>
+                <td><p>@e.Address</p></td>
+            </tr>
+        }
         </table>
 
     </p>
