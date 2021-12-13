@@ -25,11 +25,6 @@ namespace Example_2451
         public void Configure(IApplicationBuilder app)
         {
             app.UseStaticFiles();
-            app.Use((context, next) =>
-            {
-                var url = context.Request.GetDisplayUrl();
-                return next.Invoke();
-            });
             app.UseMvc(
                 r =>
                 {
