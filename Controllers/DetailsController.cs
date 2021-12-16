@@ -12,10 +12,9 @@ namespace Phone_book.Controllers
     public class DetailsController : Controller
     {
         public Сontact Contact { get; private set; }
-        public IActionResult Details()
+        public IActionResult Details(int id)
         {
-            //найти как вытащить url и передать id
-            Contact = Repository.GetContactById(0);
+            Contact = Repository.GetContactById(id);
             return View(Contact);
         }
     }
