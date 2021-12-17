@@ -5,11 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\ts\scripts.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\ts\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,10 +20,6 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
     <PackageReference Include="MySql.Data" Version="8.0.27" />
     <PackageReference Include="Numind.AspNetCore.SpaServices.Extensions" Version="1.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <TypeScriptCompile Include="wwwroot\ts\scripts.ts" />
   </ItemGroup>
 
 </Project>

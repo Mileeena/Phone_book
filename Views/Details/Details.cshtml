@@ -2,20 +2,17 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Details</title>
-    <link href="~/css/stylecss.css" rel="stylesheet" />
-    <script src="~/ts/scripts.js"></script>
+    <title>Контакты</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-<table border="1">
-    <tr>
-            <td><p>@Model.Id</p></td>
-            <td><p>@Model.Surname</p></td>
-            <td><p>@Model.Name</p></td>
-            <td><p>@Model.Patronymic</p></td>
-            <td><p>+@Model.PhoneNumber</p></td>
-            <td><p>@Model.Address</p></td>
-        </tr>
-</table>
+
+    <div class="">
+        <h2 class="h2">@Model.Name @Model.Patronymic @Model.Surname</h2>
+        <p class="">+@Model.PhoneNumber</p>
+        <p>@Model.Address</p>
+    </div>
+
 </body>
 </html>
