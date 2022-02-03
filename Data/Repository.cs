@@ -63,7 +63,7 @@ namespace Phone_book.Data
         }
 
         public static Сontact GetContactById(int id)
-        {
+        { 
             return Contacts.FirstOrDefault(x => x.Id == id);
         }
     }

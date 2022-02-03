@@ -25,10 +25,7 @@ namespace Phone_book.Models
             Address = _address;
         }
 
-        //public string Description
-        //{
-        //    get => String.Format($"Id: {Id}\nName:{Name}\nSurname: {Surname}\nPatronymic: {Patronymic}");
-        //    set { return; }
-        //}
+        public Сontact(){}
+
     }
 }

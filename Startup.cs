@@ -18,7 +18,6 @@ namespace Example_2451
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSpaStaticFiles();
             services.AddMvc(options => options.EnableEndpointRouting = false);
         }
 

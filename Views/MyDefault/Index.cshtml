@@ -1,4 +1,7 @@
-﻿@model List<Phone_book.Models.Сontact>
+﻿@using Phone_book.Models
+@{
+    ViewData["Title"] = "Index";
+}
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -8,6 +11,7 @@
 </head>
 <body>
 <h1 class="h1">Контакты</h1>
+<a class="btn btn-primary" href="/Add/Add">Новый контакт</a>
 <table class="table">
     <thead>
         <tr>
@@ -17,12 +21,12 @@
         </tr>
     </thead>
     <tbody>
-    @foreach (var e in Model)
+    @foreach (var e in ViewBag.Contacts)
     {
         <tr>
             <th scope="row"><a href="/Details/Details?id=@e.Id">@e.Id</a></th>
             <td>@e.Name @e.Surname</td>
-            <td>+@e.PhoneNumber</td>
+            <td>@e.PhoneNumber</td>
         </tr>
     }
     </tbody>
