@@ -154,5 +154,8 @@ D:\ЗАГРУЗКИ\уроки ASP\Skillbox\Phone_book\obj\Debug\net5.0-windows1
 D:\ЗАГРУЗКИ\уроки ASP\Skillbox\Phone_book\obj\Debug\net5.0-windows10.0.19041.0\Phone_book.pdb
 D:\ЗАГРУЗКИ\уроки ASP\Skillbox\Phone_book\obj\Debug\net5.0-windows10.0.19041.0\Phone_book.genruntimeconfig.cache
 D:\ЗАГРУЗКИ\уроки ASP\Skillbox\Phone_book\obj\Debug\net5.0-windows10.0.19041.0\Razor\Views\Add\Add.cshtml.g.cs
-D:\ЗАГРУЗКИ\уроки ASP\Skillbox\Phone_book\bin\Debug\net5.0-windows10.0.19041.0\Npgsql.dll
-D:\ЗАГРУЗКИ\уроки ASP\Skillbox\Phone_book\bin\Debug\net5.0-windows10.0.19041.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\ЗАГРУЗКИ\уроки ASP\Skillbox\Phone_book\bin\Debug\net5.0-windows10.0.19041.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\ЗАГРУЗКИ\уроки ASP\Skillbox\Phone_book\bin\Debug\net5.0-windows10.0.19041.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\ЗАГРУЗКИ\уроки ASP\Skillbox\Phone_book\bin\Debug\net5.0-windows10.0.19041.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\ЗАГРУЗКИ\уроки ASP\Skillbox\Phone_book\bin\Debug\net5.0-windows10.0.19041.0\Microsoft.Extensions.DependencyModel.dll
+D:\ЗАГРУЗКИ\уроки ASP\Skillbox\Phone_book\bin\Debug\net5.0-windows10.0.19041.0\Newtonsoft.Json.Bson.dll

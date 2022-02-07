@@ -14,9 +14,13 @@ namespace Phone_book.ContextFolder
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
-                @"Server=DESKTOP\SQLEXPRESS;
-                                Database=local_contacts_db;
-                                Trusted_Connection=true;"
+                @"workstation id=online-db1.mssql.somee.com;
+                                packet size=4096;
+                                user id=MVT_Admin_SQLLogin_1;
+                                pwd=opbcbywtsz;
+                                data source=online-db1.mssql.somee.com;
+                                persist security info=False;
+                                initial catalog=online-db1"
             );
         }
 

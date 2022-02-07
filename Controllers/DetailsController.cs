@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http.Extensions;
 using Phone_book.ContextFolder;
-using Phone_book.Data;
 using Phone_book.Models;
 
 namespace Phone_book.Controllers

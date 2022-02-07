@@ -60,10 +60,6 @@
               "target": "Package",
               "version": "[1.11.38, )"
             },
-            "Microsoft.AspNetCore.SpaServices": {
-              "target": "Package",
-              "version": "[3.1.21, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -91,10 +87,6 @@
             "MySql.Data": {
               "target": "Package",
               "version": "[8.0.27, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
-              "target": "Package",
-              "version": "[5.0.0, )"
             },
             "Numind.AspNetCore.SpaServices.Extensions": {
               "target": "Package",
@@ -132,10 +124,6 @@
               "target": "Package",
               "version": "[1.11.38, )"
             },
-            "Microsoft.AspNetCore.SpaServices": {
-              "target": "Package",
-              "version": "[3.1.21, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -163,10 +151,6 @@
             "MySql.Data": {
               "target": "Package",
               "version": "[8.0.27, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
-              "target": "Package",
-              "version": "[5.0.0, )"
             },
             "Numind.AspNetCore.SpaServices.Extensions": {
               "target": "Package",
