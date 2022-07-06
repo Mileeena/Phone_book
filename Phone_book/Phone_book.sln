@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phone_book", "Phone_book\Phone_book.csproj", "{61CAD5FA-11F5-46DC-B1D1-F1E74101DF08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phone_book.Data", "Phone_book.Data\Phone_book.Data.csproj", "{06814D6D-DEB3-40A7-9EB6-55C9AF2CA94D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61CAD5FA-11F5-46DC-B1D1-F1E74101DF08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61CAD5FA-11F5-46DC-B1D1-F1E74101DF08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61CAD5FA-11F5-46DC-B1D1-F1E74101DF08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61CAD5FA-11F5-46DC-B1D1-F1E74101DF08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06814D6D-DEB3-40A7-9EB6-55C9AF2CA94D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06814D6D-DEB3-40A7-9EB6-55C9AF2CA94D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06814D6D-DEB3-40A7-9EB6-55C9AF2CA94D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06814D6D-DEB3-40A7-9EB6-55C9AF2CA94D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2027931B-7C8A-4C68-AFE9-5C47BAA3F6B8}
+	EndGlobalSection
+EndGlobal

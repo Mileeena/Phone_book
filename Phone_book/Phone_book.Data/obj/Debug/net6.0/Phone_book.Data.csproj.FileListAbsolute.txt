@@ -1,0 +1,14 @@
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book.Data\bin\Debug\net6.0\Phone_book.Data.deps.json
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book.Data\bin\Debug\net6.0\Phone_book.Data.runtimeconfig.json
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book.Data\bin\Debug\net6.0\Phone_book.Data.dll
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book.Data\bin\Debug\net6.0\Phone_book.Data.pdb
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book.Data\obj\Debug\net6.0\Phone_book.Data.csproj.AssemblyReference.cache
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book.Data\obj\Debug\net6.0\Phone_book.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book.Data\obj\Debug\net6.0\Phone_book.Data.AssemblyInfoInputs.cache
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book.Data\obj\Debug\net6.0\Phone_book.Data.AssemblyInfo.cs
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book.Data\obj\Debug\net6.0\Phone_book.Data.csproj.CoreCompileInputs.cache
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book.Data\obj\Debug\net6.0\Phone_book.Data.dll
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book.Data\obj\Debug\net6.0\refint\Phone_book.Data.dll
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book.Data\obj\Debug\net6.0\Phone_book.Data.pdb
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book.Data\obj\Debug\net6.0\Phone_book.Data.genruntimeconfig.cache
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book.Data\obj\Debug\net6.0\ref\Phone_book.Data.dll
