@@ -24,8 +24,8 @@ namespace Phone_book.Controllers
         [HttpGet]
         public IActionResult Details(int id)
         {
-            Contact byId = _contextContacts.FindById(id);
-            return View(byId);
+            Contact entity = _contextContacts.FindById(id);
+            return View(entity);
         }
 
         [HttpGet]
@@ -43,28 +43,41 @@ namespace Phone_book.Controllers
         }
 
         [HttpPost]
-        public IActionResult GetDataFromViewField(int _id, string _surname, string _name,
+        public IActionResult GetDataFromViewField(string _surname, string _name,
             string _patronymic, string _phoneNumber, string _address)
         {
                 _contextContacts.Add(
                     new Contact()
                     {
-                        Id = _id,
                         Surname = _surname,
                         Name = _name,
                         Patronymic = _patronymic,
                         PhoneNumber = _phoneNumber,
                         Address = _address
-
                     });
 
                 return Redirect("~/");
         }
 
-        //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        //public IActionResult Error()
-        //{
-        //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        //}
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            Contact entity = _contextContacts.FindById(id);
+            return View(entity);
+        }
+
+        [HttpPost]
+        public IActionResult Update(int _id, string _surname, string _name,
+            string _patronymic, string _phoneNumber, string _address)
+        {
+            var entity = _contextContacts.FindById(_id);
+            entity.Surname = _surname;
+            entity.Name = _name;
+            entity.Patronymic = _patronymic;
+            entity.PhoneNumber = _phoneNumber;
+            entity.Address = _address;
+            _contextContacts.Update(entity);
+            return Redirect("~/");
+        }
     }
 }
