@@ -35,6 +35,14 @@ namespace Phone_book.Controllers
         }
 
         [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            var entity = _contextContacts.FindById(id);
+            _contextContacts.Delete(entity);
+            return Redirect("~/");
+        }
+
+        [HttpPost]
         public IActionResult GetDataFromViewField(int _id, string _surname, string _name,
             string _patronymic, string _phoneNumber, string _address)
         {

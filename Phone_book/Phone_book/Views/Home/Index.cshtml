@@ -27,6 +27,12 @@
             <th scope="row"><a href="Home/Details?id=@e.Id">@e.Id</a></th>
             <td>@e.Name @e.Surname</td>
             <td>@e.PhoneNumber</td>
+            <td>
+                <a class="btn btn-primary" href="">Изменить</a>
+                <form action="~/Home/Delete?id=@e.Id" method="post">
+                   <button class="btn btn-primary">Удалить</button>
+                </form>
+            </td>
         </tr>
     }
     </tbody>
