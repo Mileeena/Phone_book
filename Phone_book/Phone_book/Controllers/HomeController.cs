@@ -25,6 +25,10 @@ namespace Phone_book.Controllers
         public IActionResult Details(int id)
         {
             Contact entity = _contextContacts.FindById(id);
+            if (entity == null)
+            {
+                return Redirect("~/");
+            }
             return View(entity);
         }
 
@@ -71,6 +75,8 @@ namespace Phone_book.Controllers
             string _patronymic, string _phoneNumber, string _address)
         {
             var entity = _contextContacts.FindById(_id);
+            if(entity == null) entity = new Contact();
+
             entity.Surname = _surname;
             entity.Name = _name;
             entity.Patronymic = _patronymic;
