@@ -9689,9 +9689,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ЗАГРУЗКИ\\C#\\Phone_book\\Phone_book\\Phone_book\\Phone_book.csproj",
-      "projectName": "Phone_book",
-      "projectPath": "D:\\ЗАГРУЗКИ\\C#\\Phone_book\\Phone_book\\Phone_book\\Phone_book.csproj",
+      "projectUniqueName": "D:\\ЗАГРУЗКИ\\C#\\Phone_book\\Phone_book\\Phone_book\\Phone_book.WebClient.csproj",
+      "projectName": "Phone_book.WebClient",
+      "projectPath": "D:\\ЗАГРУЗКИ\\C#\\Phone_book\\Phone_book\\Phone_book\\Phone_book.WebClient.csproj",
       "packagesPath": "C:\\Users\\shato\\.nuget\\packages\\",
       "outputPath": "D:\\ЗАГРУЗКИ\\C#\\Phone_book\\Phone_book\\Phone_book\\obj\\",
       "projectStyle": "PackageReference",

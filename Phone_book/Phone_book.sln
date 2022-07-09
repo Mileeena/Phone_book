@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phone_book", "Phone_book\Phone_book.csproj", "{61CAD5FA-11F5-46DC-B1D1-F1E74101DF08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phone_book.WebClient", "Phone_book\Phone_book.WebClient.csproj", "{61CAD5FA-11F5-46DC-B1D1-F1E74101DF08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phone_book.Data", "Phone_book.Data\Phone_book.Data.csproj", "{06814D6D-DEB3-40A7-9EB6-55C9AF2CA94D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phone_book.Data", "Phone_book.Data\Phone_book.Data.csproj", "{06814D6D-DEB3-40A7-9EB6-55C9AF2CA94D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phone_book.AuthApi", "Phone_book.AuthApi\Phone_book.AuthApi.csproj", "{A60DB54A-3303-4D0B-A23B-E1A92372EA62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phone_book.Auth.Common", "Phone_book.Auth.Common\Phone_book.Auth.Common.csproj", "{82F706F0-A885-41E8-8B34-C163E0B181CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{06814D6D-DEB3-40A7-9EB6-55C9AF2CA94D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06814D6D-DEB3-40A7-9EB6-55C9AF2CA94D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06814D6D-DEB3-40A7-9EB6-55C9AF2CA94D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A60DB54A-3303-4D0B-A23B-E1A92372EA62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A60DB54A-3303-4D0B-A23B-E1A92372EA62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A60DB54A-3303-4D0B-A23B-E1A92372EA62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A60DB54A-3303-4D0B-A23B-E1A92372EA62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82F706F0-A885-41E8-8B34-C163E0B181CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82F706F0-A885-41E8-8B34-C163E0B181CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82F706F0-A885-41E8-8B34-C163E0B181CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82F706F0-A885-41E8-8B34-C163E0B181CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

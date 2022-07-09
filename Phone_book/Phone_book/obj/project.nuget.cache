@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6pNUKLxJOc01eGQSgDBxE/sveg77VWWFJDej0vfZkanWcaKefCFRAwBBewGnsfkhfCQFmfGDTqh0vY4/Qo9zvg==",
+  "dgSpecHash": "LRX/wtRbAzV5nKEHo8KL1si5a06o5qAbZdst3u5Xg2wWC0qCVMkmYGxHXkcWN9xbUz2uY5xghSwKr7r+ts0gqw==",
   "success": true,
-  "projectFilePath": "D:\\ЗАГРУЗКИ\\C#\\Phone_book\\Phone_book\\Phone_book\\Phone_book.csproj",
+  "projectFilePath": "D:\\ЗАГРУЗКИ\\C#\\Phone_book\\Phone_book\\Phone_book\\Phone_book.WebClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shato\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\shato\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
