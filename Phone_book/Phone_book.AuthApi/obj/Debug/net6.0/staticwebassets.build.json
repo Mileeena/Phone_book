@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "dBMS/PMfvzQzAqbf7zCOLvBe8eJMoRFWQvMddliUaiw=",
+  "Source": "Phone_book.Auth.Api",
+  "BasePath": "_content/Phone_book.Auth.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

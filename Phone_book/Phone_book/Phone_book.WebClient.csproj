@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Phone_book.Auth.Common\Phone_book.Auth.Common.csproj" />
     <ProjectReference Include="..\Phone_book.Data\Phone_book.Data.csproj" />
   </ItemGroup>
 

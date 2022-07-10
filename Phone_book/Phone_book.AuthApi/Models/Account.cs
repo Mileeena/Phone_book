@@ -1,4 +1,4 @@
-﻿namespace Phone_book.AuthApi.Models;
+﻿namespace Phone_book.Auth.Api.Models;
 
 public class Account
 {

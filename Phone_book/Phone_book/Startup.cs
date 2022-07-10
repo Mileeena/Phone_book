@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Phone_book.Auth.Common;
 using Phone_book.Data;
 using Phone_book.Data.Models;
 using Phone_book.Data.Repository;
@@ -22,6 +23,20 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllers();
+
+        var authOptions = Configuration.GetSection("Auth").Get<AuthOptions>();
+
+        services.AddCors(options =>
+        {
+            options.AddDefaultPolicy(
+                builder =>
+                {
+                    builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                });
+        });
+
         services.AddMvc(options => options.EnableEndpointRouting = false);
 
         string connectionString = Configuration.GetConnectionString("DefaultConnection");
@@ -29,7 +44,6 @@ public class Startup
             builder.UseSqlServer(connectionString, b => b.MigrationsAssembly("Phone_book.Data"))
         );
         services.AddScoped<IRepository<Contact>, ContactRepository>();
-        //services.AddTransient<IRepository<Contact>, ContactRepository>();
 
         //services.AddSwaggerGen(c =>
         //{
@@ -66,13 +80,13 @@ public class Startup
                 );
             });
 
-        //app.UseRouting();
+        app.UseRouting();
 
-        //app.UseAuthorization();
+        app.UseCors();
 
-        //app.UseEndpoints(endpoints =>
-        //{
-        //    endpoints.MapControllers();
-        //});
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllers();
+        });
     }
 }

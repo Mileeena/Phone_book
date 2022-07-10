@@ -3,16 +3,16 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:5561",
+      "applicationUrl": "https://localhost:5561",
       "sslPort": 0
     }
   },
   "profiles": {
-    "Phone_book.AuthApi": {
+    "Phone_book.Auth.Api": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:5021",
+      "applicationUrl": "https://localhost:5021",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

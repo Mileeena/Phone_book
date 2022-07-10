@@ -3138,6 +3138,19 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "Phone_book.Auth.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "6.8.0"
+        },
+        "compile": {
+          "bin/placeholder/Phone_book.Auth.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Phone_book.Auth.Common.dll": {}
+        }
+      },
       "Phone_book.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -9665,6 +9678,11 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "Phone_book.Auth.Common/1.0.0": {
+      "type": "project",
+      "path": "../Phone_book.Auth.Common/Phone_book.Auth.Common.csproj",
+      "msbuildProject": "../Phone_book.Auth.Common/Phone_book.Auth.Common.csproj"
+    },
     "Phone_book.Data/1.0.0": {
       "type": "project",
       "path": "../Phone_book.Data/Phone_book.Data.csproj",
@@ -9677,6 +9695,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.6",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.6",
+      "Phone_book.Auth.Common >= 1.0.0",
       "Phone_book.Data >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.3.0"
     ]
@@ -9716,6 +9735,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "D:\\ЗАГРУЗКИ\\C#\\Phone_book\\Phone_book\\Phone_book.Auth.Common\\Phone_book.Auth.Common.csproj": {
+              "projectPath": "D:\\ЗАГРУЗКИ\\C#\\Phone_book\\Phone_book\\Phone_book.Auth.Common\\Phone_book.Auth.Common.csproj"
+            },
             "D:\\ЗАГРУЗКИ\\C#\\Phone_book\\Phone_book\\Phone_book.Data\\Phone_book.Data.csproj": {
               "projectPath": "D:\\ЗАГРУЗКИ\\C#\\Phone_book\\Phone_book\\Phone_book.Data\\Phone_book.Data.csproj"
             }
