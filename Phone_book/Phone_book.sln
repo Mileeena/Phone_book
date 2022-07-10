@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phone_book.Auth.Api", "Phon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phone_book.Auth.Common", "Phone_book.Auth.Common\Phone_book.Auth.Common.csproj", "{82F706F0-A885-41E8-8B34-C163E0B181CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phone_book.Api", "Phone_book.Api\Phone_book.Api.csproj", "{5FE59D32-DE0A-46D8-9AEC-D6A0EEB04DD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{82F706F0-A885-41E8-8B34-C163E0B181CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82F706F0-A885-41E8-8B34-C163E0B181CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82F706F0-A885-41E8-8B34-C163E0B181CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FE59D32-DE0A-46D8-9AEC-D6A0EEB04DD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FE59D32-DE0A-46D8-9AEC-D6A0EEB04DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FE59D32-DE0A-46D8-9AEC-D6A0EEB04DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FE59D32-DE0A-46D8-9AEC-D6A0EEB04DD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
