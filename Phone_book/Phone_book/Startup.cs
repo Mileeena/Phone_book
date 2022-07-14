@@ -71,22 +71,28 @@ public class Startup
 
         app.UseStaticFiles();
 
-        app.UseMvc(
-            r =>
-            {
-                r.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}"
-                );
-            });
-
         app.UseRouting();
-
-        app.UseCors();
-
         app.UseEndpoints(endpoints =>
         {
-            endpoints.MapControllers();
+            endpoints.MapControllerRoute(
+                name: "Default",
+                pattern: "{controller=home}/{action=index}"
+            );
+
+            endpoints.MapControllerRoute(
+                name: "UserById",
+                pattern: "Details/{id}",
+                defaults: new
+                {
+                    controller = "Home",
+                    action = "Details",
+                }
+
+            );
+
+            //endpoints.MapControllers();
         });
+
+        app.UseCors();
     }
 }

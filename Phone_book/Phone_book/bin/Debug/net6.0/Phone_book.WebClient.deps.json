@@ -12,6 +12,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.6",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.6",
+          "Phone_book.Auth.Common": "1.0.0",
           "Phone_book.Data": "1.0.0",
           "Swashbuckle.AspNetCore": "6.3.0"
         },
@@ -2262,6 +2263,14 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "Phone_book.Auth.Common/1.0.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "6.8.0"
+        },
+        "runtime": {
+          "Phone_book.Auth.Common.dll": {}
+        }
+      },
       "Phone_book.Data/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.6"
@@ -3516,6 +3525,11 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "Phone_book.Auth.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Phone_book.Data/1.0.0": {
       "type": "project",

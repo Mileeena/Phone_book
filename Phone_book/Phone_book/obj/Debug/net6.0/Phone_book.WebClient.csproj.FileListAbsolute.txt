@@ -266,3 +266,5 @@ D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book\obj\Debug\net6.0\refint\
 D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book\obj\Debug\net6.0\Phone_book.WebClient.pdb
 D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book\obj\Debug\net6.0\Phone_book.WebClient.genruntimeconfig.cache
 D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book\obj\Debug\net6.0\ref\Phone_book.WebClient.dll
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book\bin\Debug\net6.0\Phone_book.Auth.Common.dll
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book\Phone_book\bin\Debug\net6.0\Phone_book.Auth.Common.pdb
