@@ -1,15 +1,8 @@
-﻿@using Phone_book.Data
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Index";
 }
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Контакты</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
 <h1 class="h1">Контакты</h1>
 <a class="btn btn-primary" href="Home/Add">Новый контакт</a>
 <table class="table">
@@ -30,12 +23,10 @@
             <td>
                 <a class="btn btn-primary" href="Home/Edit?id=@e.Id">Изменить</a>
                 <form action="~/Home/Delete?id=@e.Id" method="post">
-                   <button class="btn btn-primary">Удалить</button>
+                    <button class="btn btn-primary">Удалить</button>
                 </form>
             </td>
         </tr>
     }
     </tbody>
 </table>
-</body>
-</html>

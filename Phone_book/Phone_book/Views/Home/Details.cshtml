@@ -1,18 +1,7 @@
 ﻿@model Phone_book.Data.Models.Contact
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>@Model.Name @Model.Surname</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
-
-    <div class="">
-        <h2 class="h2">@Model.Name @Model.Patronymic @Model.Surname</h2>
-        <p class="">@Model.PhoneNumber</p>
-        <p>@Model.Address</p>
-    </div>
-
-</body>
-</html>
+<div class="">
+    <h2 class="h2">@Model.Name @Model.Patronymic @Model.Surname</h2>
+    <p class="">@Model.PhoneNumber</p>
+    <p>@Model.Address</p>
+</div>
