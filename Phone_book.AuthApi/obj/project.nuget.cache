@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "IQUya993qfi/+iHpL6QWDYU5+SuVO000XVe9qPkLyTqFcEo9pwY2jH84PM2hyd3egyurq5jGQF9cCGrRevl5qA==",
+  "success": true,
+  "projectFilePath": "D:\\ЗАГРУЗКИ\\C#\\Phone_book\\Phone_book.AuthApi\\Phone_book.Auth.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\shato\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\shato\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.21.0\\microsoft.identitymodel.abstractions.6.21.0.nupkg.sha512",
+    "C:\\Users\\shato\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.21.0\\microsoft.identitymodel.jsonwebtokens.6.21.0.nupkg.sha512",
+    "C:\\Users\\shato\\.nuget\\packages\\microsoft.identitymodel.logging\\6.21.0\\microsoft.identitymodel.logging.6.21.0.nupkg.sha512",
+    "C:\\Users\\shato\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.21.0\\microsoft.identitymodel.tokens.6.21.0.nupkg.sha512",
+    "C:\\Users\\shato\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.21.0\\system.identitymodel.tokens.jwt.6.21.0.nupkg.sha512",
+    "C:\\Users\\shato\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
