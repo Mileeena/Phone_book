@@ -1,38 +1,32 @@
-﻿using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Phone_book.Data.Models;
 using Phone_book.Data.Repository;
 
 namespace Phone_book.Api.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api")]
     public class ContactsController : ControllerBase
     {
-        public IRepository<Contact> _contextContacts { get; private set; }
-
-        private int UserId => int.Parse(User.Claims.Single(c => c.Type == ClaimTypes.NameIdentifier).Value);
+        
+        private readonly ILogger<ContactsController> _logger;
+        public readonly IRepository<Contact> _contextContacts;
 
         public ContactsController(ILogger<ContactsController> logger, IRepository<Contact> contextContacts)
         {
+            _logger = logger;
             _contextContacts = contextContacts;
         }
 
         [HttpGet]
-        //[Authorize (Roles = "User")]
         [Route("contacts")]
-        public IActionResult GetAvailableContacts()
+        public ActionResult<Contact> GetAvailableContacts()
         {
-            if (UserId != 1) return Ok(Enumerable.Empty<Contact>());
-
             return Ok(_contextContacts.All);
         }
 
-
         [HttpGet]
-        //[Authorize (Roles = "User")]
+        //[Authorize (Roles = "")]
         [Route("contacts/{id}")]
         public IActionResult Details(int id)
         {
@@ -45,7 +39,7 @@ namespace Phone_book.Api.Controllers
         }
 
         [HttpGet]
-        //[Authorize (Roles = "User")]
+        //[Authorize (Roles = "")]
         [Route("add")]
         public IActionResult Add([FromBody] Contact entity)
         {
@@ -61,12 +55,13 @@ namespace Phone_book.Api.Controllers
         }
 
         [HttpGet]
-        //[Authorize (Roles = "User")]
+        //[Authorize (Roles = "")]
         [Route("delete/{id}")]
         public IActionResult Delete(int id)
         {
             try
             {
+
                 _contextContacts.Delete(_contextContacts.FindById(id));
                 return Ok();
             }
@@ -77,7 +72,7 @@ namespace Phone_book.Api.Controllers
         }
 
         [HttpGet]
-        //[Authorize (Roles = "User")]
+        //[Authorize (Roles = "")]
         [Route("update/{id}")]
         public IActionResult Update([FromBody] Contact entity)
         {

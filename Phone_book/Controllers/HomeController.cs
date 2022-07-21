@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Newtonsoft.Json;
 using Phone_book.Data.Models;
 using Phone_book.Data.Repository;
 
@@ -7,7 +8,8 @@ namespace Phone_book.Controllers
 {
     public class HomeController : Controller
     {
-        public IRepository<Contact> _contextContacts { get; private set; }
+        private IRepository<Contact> _contextContacts { get; }
+        private readonly HttpClient _httpClient = new HttpClient();
 
         public HomeController(ILogger<HomeController> logger, IRepository<Contact> contextContacts)
         {
@@ -17,17 +19,25 @@ namespace Phone_book.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            ViewBag.Contacts = _contextContacts.All;
+            var url = @$"{AppConst.ApiPath}/api/contacts";
+
+            string json = _httpClient.GetStringAsync(url).Result;
+
+            ViewBag.Contacts = JsonConvert.DeserializeObject<List<Contact>>(json);
             return View();
         }
 
         [HttpGet]
         public IActionResult Details(int id)
         {
-            Contact entity = _contextContacts.FindById(id);
+            var url = @$"{AppConst.ApiPath}/api/contacts/{id}";
+
+            string json = _httpClient.GetStringAsync(url).Result;
+
+            Contact entity = JsonConvert.DeserializeObject<Contact>(json);
             if (entity == null)
             {
-                return Redirect("~/");
+                return RedirectToAction("Index");
             }
             return View(entity);
         }
@@ -43,7 +53,7 @@ namespace Phone_book.Controllers
         {
             var entity = _contextContacts.FindById(id);
             _contextContacts.Delete(entity);
-            return Redirect("~/");
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
@@ -60,7 +70,7 @@ namespace Phone_book.Controllers
                         Address = _address
                     });
 
-                return Redirect("~/");
+                return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -83,7 +93,7 @@ namespace Phone_book.Controllers
             entity.PhoneNumber = _phoneNumber;
             entity.Address = _address;
             _contextContacts.Update(entity);
-            return Redirect("~/");
+            return RedirectToAction("Index");
         }
     }
 }
