@@ -12,9 +12,13 @@
 ```sh
 git clone https://github.com/Mileeena/Phone_book.git
 ```
-3. Запустите проект, добавив свою строку подключения к SQL Server в файл appsettings.json
+3. Добавьте свою строку подключения к SQL Server в файл appsettings.json
 
 ![appsettings json](https://user-images.githubusercontent.com/61462657/177916707-e4566588-ba63-4c8f-ac2a-caa716f6fec0.png)
+
+4. Запустите решение, выбрав несколько запускаемых проектов
+
+![image](https://user-images.githubusercontent.com/61462657/180419775-09ac44cc-d100-4895-a644-bfa1dafe6c98.png)
 
 ---
 
