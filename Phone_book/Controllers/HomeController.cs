@@ -1,19 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+using System.Text;
 using Newtonsoft.Json;
 using Phone_book.Data.Models;
-using Phone_book.Data.Repository;
 
 namespace Phone_book.Controllers
 {
     public class HomeController : Controller
     {
-        private IRepository<Contact> _contextContacts { get; }
         private readonly HttpClient _httpClient = new HttpClient();
+        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger, IRepository<Contact> contextContacts)
+        public HomeController(ILogger<HomeController> logger)
         {
-            _contextContacts = contextContacts;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -51,8 +50,15 @@ namespace Phone_book.Controllers
         [HttpPost]
         public IActionResult Delete(int id)
         {
-            var entity = _contextContacts.FindById(id);
-            _contextContacts.Delete(entity);
+            var url = @$"{AppConst.ApiPath}/api/delete/{id}";
+
+            using (_httpClient)
+            {
+                var content = new StringContent(JsonConvert.SerializeObject(id),
+                    Encoding.UTF8, "application/json");
+                HttpResponseMessage result = _httpClient.GetAsync(url).Result;
+            }
+
             return RedirectToAction("Index");
         }
 
@@ -60,23 +66,37 @@ namespace Phone_book.Controllers
         public IActionResult GetDataFromViewField(string _surname, string _name,
             string _patronymic, string _phoneNumber, string _address)
         {
-                _contextContacts.Add(
-                    new Contact()
-                    {
-                        Surname = _surname,
-                        Name = _name,
-                        Patronymic = _patronymic,
-                        PhoneNumber = _phoneNumber,
-                        Address = _address
-                    });
+            var entity = new Contact()
+            {
+                Surname = _surname,
+                Name = _name,
+                Patronymic = _patronymic,
+                PhoneNumber = _phoneNumber,
+                Address = _address
+            };
 
-                return RedirectToAction("Index");
+            var url = @$"{AppConst.ApiPath}/api/add";
+
+
+            using (_httpClient)
+            {
+                var content = new StringContent(JsonConvert.SerializeObject(entity),
+                    Encoding.UTF8, "application/json");
+                HttpResponseMessage result = _httpClient.PostAsync(url, content).Result;
+            }
+
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            Contact entity = _contextContacts.FindById(id);
+            var url = @$"{AppConst.ApiPath}/api/contacts/{id}";
+
+            string json = _httpClient.GetStringAsync(url).Result;
+
+            Contact entity = JsonConvert.DeserializeObject<Contact>(json);
+
             return View(entity);
         }
 
@@ -84,15 +104,28 @@ namespace Phone_book.Controllers
         public IActionResult Update(int _id, string _surname, string _name,
             string _patronymic, string _phoneNumber, string _address)
         {
-            var entity = _contextContacts.FindById(_id);
-            if(entity == null) entity = new Contact();
+            var url = @$"{AppConst.ApiPath}/api/contacts/{_id}";
+
+            string json = _httpClient.GetStringAsync(url).Result;
+
+            Contact entity = JsonConvert.DeserializeObject<Contact>(json);
+            if (entity == null) entity = new Contact();
 
             entity.Surname = _surname;
             entity.Name = _name;
             entity.Patronymic = _patronymic;
             entity.PhoneNumber = _phoneNumber;
             entity.Address = _address;
-            _contextContacts.Update(entity);
+
+            url = @$"{AppConst.ApiPath}/api/update";
+
+            using (_httpClient)
+            {
+                var content = new StringContent(JsonConvert.SerializeObject(entity),
+                    Encoding.UTF8, "application/json");
+                HttpResponseMessage result = _httpClient.PostAsync(url, content).Result;
+            }
+
             return RedirectToAction("Index");
         }
     }

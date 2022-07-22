@@ -38,7 +38,7 @@ namespace Phone_book.Api.Controllers
             return Ok(entity);
         }
 
-        [HttpGet]
+        [HttpPost]
         //[Authorize (Roles = "")]
         [Route("add")]
         public IActionResult Add([FromBody] Contact entity)
@@ -57,11 +57,10 @@ namespace Phone_book.Api.Controllers
         [HttpGet]
         //[Authorize (Roles = "")]
         [Route("delete/{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete([FromRoute] int id)
         {
             try
             {
-
                 _contextContacts.Delete(_contextContacts.FindById(id));
                 return Ok();
             }
@@ -71,9 +70,9 @@ namespace Phone_book.Api.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpPost]
         //[Authorize (Roles = "")]
-        [Route("update/{id}")]
+        [Route("update")]
         public IActionResult Update([FromBody] Contact entity)
         {
             try
