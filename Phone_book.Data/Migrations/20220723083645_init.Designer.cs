@@ -11,8 +11,8 @@ using Phone_book.Data;
 namespace Phone_book.Data.Migrations
 {
     [DbContext(typeof(PhoneBookContext))]
-    [Migration("20220706053420_v1")]
-    partial class v1
+    [Migration("20220723083645_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

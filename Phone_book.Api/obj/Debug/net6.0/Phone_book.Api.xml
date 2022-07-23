@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Phone_book.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Phone_book.Api.Controllers.ContactsController.GetAvailableContacts">
+            <summary>
+            Get All Contacts
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /api/contacts
+            
+            </remarks>        
+            <returns>A list of existed contacts</returns>
+            <response code="200">Returns the list of existed contacts</response>
+            <response code="400">If there was an error</response>
+        </member>
+        <member name="M:Phone_book.Api.Controllers.ContactsController.Details(System.Int32)">
+            <summary>
+            Get Selected Contact
+            </summary>
+            <param name="id">Contact id</param>
+            <remarks>
+            Sample request:
+            
+                GET /api/contacts/id
+            
+            </remarks>        
+            <returns>Selected contact</returns>
+            <response code="200">Returns the selected contact</response>
+            <response code="400">If there was an error</response>
+            <response code="404">If the contact is not found</response>
+        </member>
+        <member name="M:Phone_book.Api.Controllers.ContactsController.Add(Phone_book.Data.Models.Contact)">
+            <summary>
+            Add New Contact
+            </summary>
+            <param name="entity">Contact</param>
+            <remarks>
+            Sample request:
+            
+                POST /api/add
+                {
+                    "id": 0,
+                    "surname": "Belson",
+                    "name": "Gevin",
+                    "patronymic": "Stuart",
+                    "phoneNumber": "+799999999999",
+                    "address": "HERALD NEW YORK NY 10001-3057 USA"
+                }
+            </remarks>        
+            <returns>Add contact</returns>
+            <response code="200">Add the contact</response>
+            <response code="400">If there was an error</response>
+            <response code="404">If the contact is null</response>
+        </member>
+        <member name="M:Phone_book.Api.Controllers.ContactsController.Delete(System.Int32)">
+            <summary>
+            Delete Selected Contact
+            </summary>
+            <param name="id">Contact id</param>
+            <remarks>
+            Sample request:
+            
+                GET /api/Delete/id
+            
+            </remarks>        
+            <returns>Delete selected contact</returns>
+            <response code="200">Delete the selected contact</response>
+            <response code="400">If there was an error</response>
+            <response code="404">If the contact is null</response>
+        </member>
+        <member name="M:Phone_book.Api.Controllers.ContactsController.Update(Phone_book.Data.Models.Contact)">
+            <summary>
+            Update Selected Contact
+            </summary>
+            <param name="entity">Contact</param>
+            <remarks>
+            Sample request:
+            
+                POST /api/update
+                {
+                    "id": 0,
+                    "surname": "Belson",
+                    "name": "Gevin",
+                    "patronymic": "Stuart",
+                    "phoneNumber": "+799999999999",
+                    "address": "HERALD NEW YORK NY 10001-3057 USA"
+                }
+            </remarks>        
+            <returns>Update contact</returns>
+            <response code="200">Update the contact</response>
+            <response code="400">If there was an error</response>
+            <response code="404">If the contact is null</response>
+        </member>
+    </members>
+</doc>

@@ -59,3 +59,5 @@ D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.Api\obj\Debug\net6.0\refint\Phone_b
 D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.Api\obj\Debug\net6.0\Phone_book.Api.pdb
 D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.Api\obj\Debug\net6.0\Phone_book.Api.genruntimeconfig.cache
 D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.Api\obj\Debug\net6.0\ref\Phone_book.Api.dll
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.Api\bin\Debug\net6.0\Phone_book.Api.xml
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.Api\obj\Debug\net6.0\Phone_book.Api.xml

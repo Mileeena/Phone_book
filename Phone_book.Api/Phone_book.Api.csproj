@@ -14,4 +14,9 @@
     <ProjectReference Include="..\Phone_book.Data\Phone_book.Data.csproj" />
   </ItemGroup>
 
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+	</PropertyGroup>
+
 </Project>
