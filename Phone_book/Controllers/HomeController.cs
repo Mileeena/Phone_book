@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Text;
+using Microsoft.AspNetCore.Authorization;
 using Newtonsoft.Json;
 using Phone_book.Data.Models;
 
@@ -27,12 +28,7 @@ namespace Phone_book.Controllers
         }
 
         [HttpGet]
-        public IActionResult Login()
-        {
-            return View();
-        }
-
-        [HttpGet]
+        //[Authorize]
         public IActionResult Details(int id)
         {
             var url = @$"{AppConst.ApiPath}/api/contacts/{id}";

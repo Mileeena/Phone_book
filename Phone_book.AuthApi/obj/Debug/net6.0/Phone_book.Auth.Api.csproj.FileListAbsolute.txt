@@ -56,3 +56,6 @@ D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.AuthApi\obj\Debug\net6.0\refint\Pho
 D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.AuthApi\obj\Debug\net6.0\Phone_book.Auth.Api.pdb
 D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.AuthApi\obj\Debug\net6.0\Phone_book.Auth.Api.genruntimeconfig.cache
 D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.AuthApi\obj\Debug\net6.0\ref\Phone_book.Auth.Api.dll
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.AuthApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.AuthApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.AuthApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

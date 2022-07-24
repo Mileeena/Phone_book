@@ -65,7 +65,7 @@ namespace Phone_book.Api.Controllers
         /// <response code="400">If there was an error</response>
         /// <response code="404">If the contact is not found</response>
         [HttpGet]
-        [Authorize (Roles = "User")]
+        //[Authorize (Roles = "User")]
         [Route("contacts/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

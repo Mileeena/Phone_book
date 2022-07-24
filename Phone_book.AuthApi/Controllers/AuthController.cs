@@ -8,8 +8,8 @@ using Phone_book.Auth.Api.Models;
 
 namespace Phone_book.Auth.Api.Controllers;
 
-[Route("api/[action]")]
 [ApiController]
+[Route("api")]
 public class AuthController : ControllerBase
 {
     private readonly IOptions<AuthOptions> authOptions;
@@ -19,7 +19,7 @@ public class AuthController : ControllerBase
         this.authOptions = authOptions;
     }
 
-    private List<Account> Accounts => new List<Account>
+    public List<Account> Accounts => new List<Account>
     {
         new Account()
         {
@@ -44,8 +44,8 @@ public class AuthController : ControllerBase
         }
     };
 
-    [Route("login")]
     [HttpPost]
+    [Route("login")]
     public IActionResult Login([FromBody] Login request)
     {
         var user = AuthenticateUser(request.Email, request.Password);
@@ -68,7 +68,7 @@ public class AuthController : ControllerBase
         return Accounts.SingleOrDefault(u => u.Email == email && u.Password == password);
     }
 
-    public string GenerateGWT(Account user)
+    private string GenerateGWT(Account user)
     {
         var authParms = authOptions.Value;
 
