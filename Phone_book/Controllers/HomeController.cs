@@ -27,6 +27,12 @@ namespace Phone_book.Controllers
         }
 
         [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpGet]
         public IActionResult Details(int id)
         {
             var url = @$"{AppConst.ApiPath}/api/contacts/{id}";

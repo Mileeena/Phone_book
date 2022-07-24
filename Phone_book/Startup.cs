@@ -1,6 +1,8 @@
 ﻿using System.Reflection;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Phone_book.Auth.Common;
 using Phone_book.Data;
@@ -22,18 +24,37 @@ public class Startup
     {
         services.AddControllers();
 
-        var authOptions = Configuration.GetSection("Auth").Get<AuthOptions>();
+        //var authOptions = Configuration.GetSection("Auth").Get<AuthOptions>();
 
-        services.AddCors(options =>
-        {
-            options.AddDefaultPolicy(
-                builder =>
-                {
-                    builder.AllowAnyOrigin()
-                        .AllowAnyMethod()
-                        .AllowAnyHeader();
-                });
-        });
+        //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        //    .AddJwtBearer(options =>
+        //    {
+        //        options.RequireHttpsMetadata = false;
+        //        options.TokenValidationParameters = new TokenValidationParameters
+        //        {
+        //            ValidateIssuer = true,
+        //            ValidIssuer = authOptions.Issuer,
+
+        //            ValidateAudience = true,
+        //            ValidAudience = authOptions.Audience,
+
+        //            ValidateLifetime = true,
+
+        //            IssuerSigningKey = authOptions.GetSymmetricSecurityKey(),
+        //            ValidateIssuerSigningKey = true
+        //        };
+        //    });
+
+        //services.AddCors(options =>
+        //{
+        //    options.AddDefaultPolicy(
+        //        builder =>
+        //        {
+        //            builder.AllowAnyOrigin()
+        //                .AllowAnyMethod()
+        //                .AllowAnyHeader();
+        //        });
+        //});
 
         services.AddMvc(options => options.EnableEndpointRouting = false);
 
@@ -54,7 +75,13 @@ public class Startup
 
         app.UseStaticFiles();
 
+
         app.UseRouting();
+        //app.UseCors();
+
+        //app.UseAuthorization();
+        //app.UseAuthorization();
+
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapControllerRoute(
@@ -83,7 +110,5 @@ public class Startup
             );
 
         });
-
-        app.UseCors();
     }
 }

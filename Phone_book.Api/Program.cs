@@ -1,6 +1,9 @@
 using System.Reflection;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Phone_book.Auth.Common;
 using Phone_book.Data;
 using Phone_book.Data.Models;
 using Phone_book.Data.Repository;
@@ -14,6 +17,38 @@ namespace Phone_book.Api
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddControllers();
+
+            var authOptions = builder.Configuration.GetSection("Auth").Get<AuthOptions>();
+
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.RequireHttpsMetadata = false;
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidIssuer = authOptions.Issuer,
+
+                        ValidateAudience = true,
+                        ValidAudience = authOptions.Audience,
+
+                        ValidateLifetime = true,
+
+                        IssuerSigningKey = authOptions.GetSymmetricSecurityKey(),
+                        ValidateIssuerSigningKey = true
+                    };
+                });
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                            .AllowAnyMethod()
+                            .AllowAnyHeader();
+                    });
+            });
 
             string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddDbContext<PhoneBookContext>(builder =>
@@ -53,9 +88,12 @@ namespace Phone_book.Api
 
             app.UseHttpsRedirection();
 
-            app.UseAuthorization();
-
             app.MapControllers();
+
+            app.UseCors();
+
+            app.UseAuthorization();
+            app.UseAuthorization();
 
             app.Run();
         }

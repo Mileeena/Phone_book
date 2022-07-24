@@ -61,3 +61,6 @@ D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.Api\obj\Debug\net6.0\Phone_book.Api
 D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.Api\obj\Debug\net6.0\ref\Phone_book.Api.dll
 D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.Api\bin\Debug\net6.0\Phone_book.Api.xml
 D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.Api\obj\Debug\net6.0\Phone_book.Api.xml
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.Api\bin\Debug\net6.0\Phone_book.Auth.Common.dll
+D:\ЗАГРУЗКИ\C#\Phone_book\Phone_book.Api\bin\Debug\net6.0\Phone_book.Auth.Common.pdb

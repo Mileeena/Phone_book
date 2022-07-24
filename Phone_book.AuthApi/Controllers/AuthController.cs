@@ -8,7 +8,7 @@ using Phone_book.Auth.Api.Models;
 
 namespace Phone_book.Auth.Api.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/[action]")]
 [ApiController]
 public class AuthController : ControllerBase
 {
@@ -68,7 +68,7 @@ public class AuthController : ControllerBase
         return Accounts.SingleOrDefault(u => u.Email == email && u.Password == password);
     }
 
-    private string GenerateGWT(Account user)
+    public string GenerateGWT(Account user)
     {
         var authParms = authOptions.Value;
 
